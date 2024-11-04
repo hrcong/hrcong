@@ -3,64 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Maintenance</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        #countdown {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #e63946;
-        }
-    </style>
+    <title>Under Construction</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>We'll be back soon!</h1>
-        <p>Our site is currently under maintenance. Estimated time remaining:</p>
-        <div id="countdown">Loading...</div>
+        <h1>Your Name</h1>
+        <div id="countdown">
+            <span id="days">00</span> days 
+            <span id="hours">00</span> hrs 
+            <span id="minutes">00</span> min 
+            <span id="seconds">00</span> sec
+        </div>
+        <p>My new personal website is under construction. Stay tuned for something amazing!</p>
+        <a href="https://www.linkedin.com/" target="_blank" class="social-link">in</a>
     </div>
-
-    <script>
-        // Set the end time for the maintenance
-        const endTime = new Date("Dec 31, 2024 12:00:00").getTime();
-
-        // Update the countdown every second
-        const countdown = setInterval(() => {
-            const now = new Date().getTime();
-            const timeRemaining = endTime - now;
-
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-            // Display the result
-            document.getElementById("countdown").innerHTML =
-                days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-            // If the countdown is over, display a message
-            if (timeRemaining < 0) {
-                clearInterval(countdown);
-                document.getElementById("countdown").innerHTML = "Maintenance complete!";
-            }
-        }, 1000);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
