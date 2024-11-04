@@ -18,22 +18,44 @@ body {
 
 .container {
     max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，提升文字可读性 */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #FFD700; /* 黄金色，使标题突出 */
+    font-weight: bold;
 }
 
 #countdown {
     font-size: 2rem;
     margin: 1rem 0;
+    color: #00CED1; /* 青色，为倒计时设置清晰的颜色 */
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #D3D3D3; /* 浅灰色，柔和的文本颜色 */
+    margin-bottom: 1.5rem;
 }
 
 .social-link {
     font-size: 1.5rem;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     margin-top: 1rem;
     display: inline-block;
+    border: 1px solid #FFFFFF;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #FFFFFF;
+    color: #333;
 }
